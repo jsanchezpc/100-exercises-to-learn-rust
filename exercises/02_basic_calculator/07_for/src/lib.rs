@@ -1,11 +1,9 @@
 // Rewrite the factorial function using a `for` loop.
 pub fn factorial(n: u32) -> u32 {
-    let mut i: u32 = n;
     let mut res: u32 = 1;
-    while i > 0 {
+    for i in 1..=n{
         res *= i;
-        i -= 1;
-    } 
+    }
     res
 }
 
