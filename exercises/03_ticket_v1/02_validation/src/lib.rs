@@ -22,9 +22,9 @@ impl Ticket {
         assert!(!title.is_empty(), "Title cannot be empty");
         assert!(!description.is_empty(), "Description cannot be empty");
 
-        assert!(title.len() <= 50, "Title cannot be longer than 50 bytes");
+        assert!(title.len() < 50, "Title cannot be longer than 50 bytes");
         assert!(
-            description.len() <= 500,
+            description.len() < 500,
             "Description cannot be longer than 500 bytes"
         );
 
